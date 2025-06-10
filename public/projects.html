@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects |Aditya</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1053/1053244.png">
+
+  <style>
+    .projects-section {
+      padding: 3rem 2rem;
+      background:transparent;
+      color: white;
+      text-align: center;
+    }
+
+    .projects-section h3 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    .card {
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 255, 231, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+   .card-body {
+  background: #222;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 0 0 10px 10px;
+}
+
+.card-body h4 {
+  color: #00ffe7;
+  margin-bottom: 0.5rem;
+}
+
+.card-body p {
+  color: #ddd;
+}
+    .card-body a {
+      background: #00ffe7;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00ffe7;
+    }
+    #jai {
+     color: #00ffe7;
+    }
+  </style>
+</head>
+<body>
+    <nav>
+   <h1><i class="fas fa-laptop-code"></i> Aditya Chauhan</h1>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+
+    <div class="dropdown">
+      <button class="dropdown-toggle"><i class="fas fa-bars"></i></button>
+      <ul class="dropdown-menu">
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="contact.html" ><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="projects-section">
+    <h3 id="jai">Projects</h3>
+    <div class="projects">
+      <div class="card">
+       <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df" alt="Food Ordering System" />
+        <div class="card-body">
+          <h4>Food Ordering System</h4>
+          <p>Multi-user authentication, order tracking, admin panel & PayPal integration.</p>
+          <a href="https://github.com/Aditya367367/online-food-order">View Project on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Book Review API">
+        <div class="card-body">
+          <h4>Book Review API</h4>
+          <p>Node.js + Express.js REST API with JWT auth, SQLite backend.</p>
+          <a href="https://github.com/Aditya367367/book-review-api">View Project on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://www.classpoint.io/_next/static/media/lbTotal.7305958e.png" alt="Student Leaderboard">
+        <div class="card-body">
+          <h4>Student Leaderboard System</h4>
+          <p>Built with React.js, PHP, SQL. Dynamic API for managing student data.</p>
+          <a href="https://github.com/Aditya367367/student-leaderboard">View Project on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/personal-portfolio/public/localhost_3000_leaderboard - Google Chrome 06-03-2025 12_30_29.png" alt="figma-app">
+        <div class="card-body">
+          <h4>Figma-app</h4>
+          <p>Next.js Project</p>
+          <a href="https://github.com/Aditya367367/figma-app">View Project on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhW6PXwsmpK3X7E-PkvbAawf8Dzzfm3hjf5A&s" alt="Blue Tick System">
+        <div class="card-body">
+          <h4>User Verification Blue Tick System</h4>
+          <p>Python-based user verification logic tested using Postman.</p>
+          <a href="https://github.com/Aditya367367/user-verification-blue-tick-">View Project on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const dropdown = document.querySelector(".dropdown");
+    const toggle = dropdown.querySelector(".dropdown-toggle");
+
+    toggle.addEventListener("click", () => {
+      dropdown.classList.toggle("show");
+    });
+
+    const currentPath = window.location.pathname.split("/").pop();
+    document.querySelectorAll("nav a").forEach(link => {
+      if (link.getAttribute("href") === currentPath) {
+        link.classList.add("active");
+      }
+    });
+  </script>
+   <footer>
+    <div class="container3">
+      <p>&copy; 2025 Aditya Chauhan. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
